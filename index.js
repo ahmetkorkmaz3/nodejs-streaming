@@ -24,5 +24,5 @@ io.on('connection', function(socket){
 });
 
 http.listen(port, function(){
-  console.log("server run %s", port);
+  console.log("server run http://127.0.0.1:%s", port);
 });

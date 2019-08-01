@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+
+    <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+    <script src="/socket.io/socket.io.js" charset="utf-8"></script>
+
+    <title></title>
+  </head>
+  <body>
+    <img id="play">
+    <div id="logger"></div>
+
+    <script type="text/javascript">
+
+      var socket = io();
+      socket.on('stream', function(image) {
+        var img = document.getElementById('play');
+        img.src = image;
+        $('#logger').text(image);
+      });
+
+    </script>
+
+  </body>
+</html>
